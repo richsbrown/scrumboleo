@@ -1,0 +1,162 @@
+.phase{
+    /* border: 1px red solid; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* border-radius: 50px; */
+}
+
+.taskListTitle{
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.taskList{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+    overflow-y: scroll;
+    border: 1px rgb(207, 206, 206) solid;
+    min-width: 400px;
+    padding: 20px;
+    border-radius: 50px;
+    /* border: none; */
+}
+
+.taskCard{
+    /* box-shadow: 3px 3px 3px 0 rgb(131, 131, 131); */
+    /* border: 1px black solid; */
+    padding: 30px;
+    margin: 10px;
+    border-radius: 50px;
+    background-color: white;
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.taskCard:hover {
+    transform: scale(1.05);
+}
+
+
+.taskTitle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 34px;
+    /* font-weight: bold; */
+}
+
+.taskOwner{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-style: italic;
+}
+
+.taskHours{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.taskCardHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.taskCardBody{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.taskOwnerHours{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  gap: 15px;
+
+}
+
+.taskCardFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+
+.deleteButton{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-align: end;
+    margin-top: -3px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+a:link {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+a:visited {
+    text-decoration: none;
+  }
+
+/* .phase_icon{
+    cursor: pointer;
+}
+
+.phase_select{
+    display: none;
+    visibility: hidden;
+}
+    
+.phase_icon:hover + .phase_select {
+    display: block;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 110px;
+    height: 30px;
+    border: none;
+    appearance: none;
+    visibility: visible;
+}
+
+.phase_icon:hover {
+    display: none;
+    z-index: -10;
+    visibility: hidden;
+} */
+
+.phase_select{
+    border-radius: 100px;
+    width: 40px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-image: url('../../assets/doubleArrow7.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 20px;
+}
+
+/* .phase_select option {
+    color: white !important
+  } */
+
+  /* select {
+    -webkit-appearance: menulist-button;
+    color: white;
+  } */
