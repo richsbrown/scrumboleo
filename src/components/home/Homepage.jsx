@@ -26,13 +26,13 @@ const Homepage = () => {
     <div className="howTo_Pics">
         <div className="howTo_container">
           <span className='howToTitle'>
-            Add all your project's tasks to your dashboard.
+            Add all of your project's tasks to your dashboard.
           </span>
           <img src={addTask} alt='add task screenshot'/>
         </div>
         <div className="howTo_container">
           <span className='howToTitle'>
-            Move your project's tasks through your dashboard.
+            Move tasks between the phases of the dashboard.
           </span>
           <img src={dashboard} alt='dashboard screenshot'/>
         </div>
