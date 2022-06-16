@@ -18,7 +18,6 @@ import UserProfile from './components/userBackend/UserProfile';
 function App(props) {
 
   const { auth, getUserProfile } = props
-  console.log('auth at appJS', auth)
 
  const [, updateState] = useState();
  const forceUpdate = useCallback(() => updateState({}), []);
@@ -60,7 +59,6 @@ function App(props) {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state at App.js', state)
   return {
     auth: state.auth.user
   }

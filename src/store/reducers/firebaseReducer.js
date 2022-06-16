@@ -17,7 +17,7 @@ const firebaseReducer = (state = initState, action) => {
                 ...state
             }
         case 'GET_USER_PROFILE':
-            console.log('get user profile')
+            //console.log('get user profile')
             //const userRef = auth.currentUser
             const userData = getDoc(doc(db, 'users', state.user.uid))
             //console.log('userData', userData)
