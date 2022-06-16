@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { signInWithEmail } from '../../store/actions/authActions'
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,6 @@ const SignIn = (props) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  //const input = {email, password}
 
   useEffect(() => {
    if(authError){
@@ -30,7 +29,6 @@ const SignIn = (props) => {
       alert('All Fields Are Required')
       return
     }
-    //console.log(input);
     props.signInWithEmail({email, password})
     setEmail('');
     setPassword('');
