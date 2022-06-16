@@ -4,9 +4,10 @@ import { db } from '../../config/firebaseConfig';
 import { getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './taskDetails.css';
 import { VscEdit } from 'react-icons/vsc';
 import { TiDelete } from 'react-icons/ti';
+import { CircularProgress } from '@mui/material';
+import './taskDetails.css';
 import moment from 'moment'
 
 const TaskDetails = () => {
@@ -201,7 +202,15 @@ const TaskDetails = () => {
         </div>
       </div>
 
-      : <h6>Loading ... </h6>
+      : 
+      <div className="circleP_Container"> 
+            <CircularProgress 
+                        style={{color: 'darkgrey', marginTop: '200px'}}
+                        size={250}
+                        thickness={1}
+            />
+        </div>
+      
       }
     </div>
   )
