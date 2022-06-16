@@ -32,7 +32,7 @@ const Homepage = () => {
         </div>
         <div className="howTo_container">
           <span className='howToTitle'>
-            Move tasks between the phases of the dashboard.
+            Move tasks from phase to phase on your dashboard.
           </span>
           <img src={dashboard} alt='dashboard screenshot'/>
         </div>
