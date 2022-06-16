@@ -31,7 +31,6 @@ signInWithEmailAndPassword(
 
 export const logOut = () => {
     return(dispatch, getState) => {
-        console.log('logging out')
         signOut(auth).then(() => {
             dispatch({ type: 'LOGOUT_SUCCESS' })
         }).catch((err) => {
@@ -42,7 +41,6 @@ export const logOut = () => {
 
 export const signUpWithEmail = (newUser) => {
     return(dispatch, getState, { }) => {
-        console.log('signup success')
         createUserWithEmailAndPassword(
             auth,
             newUser.email,

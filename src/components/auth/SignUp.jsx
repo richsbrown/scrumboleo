@@ -31,7 +31,6 @@ const SignUp = (props) => {
       alert('All Fields Are Required')
       return
     }
-    console.log(input)
     props.signUpWithEmail({firstName, lastName, email, password})
     setFirstName('')
     setLastName('')

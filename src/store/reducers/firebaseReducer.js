@@ -11,7 +11,7 @@ const initState = {
 const firebaseReducer = (state = initState, action) => {
     switch(action.type){
         case 'GET_USER_DATA':
-            console.log('get user data')
+            // console.log('get user data')
             state.user = auth.currentUser
             return {
                 ...state
@@ -27,7 +27,7 @@ const firebaseReducer = (state = initState, action) => {
             }).catch((err) => console.log(err))            
             return state
         case 'LOGOUT_SUCCESS':
-            console.log('logout success')
+            // console.log('logout success')
             //state.user = null
             //state.userProfile = null
             return {
