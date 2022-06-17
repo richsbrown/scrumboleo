@@ -123,8 +123,7 @@
     .navbar_signedOutLinks{
         transform: scale(0.5);
         width: 128px;
-        margin-right: -50px;
-        border: 1px red solid
+        margin-right: -60px;
     }
 
    
