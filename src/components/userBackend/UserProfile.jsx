@@ -1,11 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { auth, db } from '../../config/firebaseConfig'; 
-import { getDoc, doc, updateDoc, deleteDoc } from "firebase/firestore";
-import { onAuthStateChanged, updateProfile, updateEmail, updatePassword } from 'firebase/auth';
+import { getDoc, doc, updateDoc } from "firebase/firestore";
+import { onAuthStateChanged, updateEmail, updatePassword } from 'firebase/auth';
 import { useState, useEffect } from 'react';
 import { VscEdit } from 'react-icons/vsc';
-import { TiDelete } from 'react-icons/ti';
+//import { TiDelete } from 'react-icons/ti';
 import { CircularProgress } from '@mui/material';
 import './userProfile.css';
 
@@ -255,7 +255,6 @@ const UserProfile = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  //console.log('dashboard state', state)
   return {
     userProfile: state.firebase.userProfile,
   }

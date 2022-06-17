@@ -11,8 +11,6 @@
     margin-left: -40px;
     flex: 1;
     gap: 10px;
-    /* overflow-y: scroll; */
-    /* border: 1px rgb(0, 0, 0) solid; */
     background-color: rgb(245, 241, 241);
     max-width: 600px;
     min-width: 300px;

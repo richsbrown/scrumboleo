@@ -44,8 +44,7 @@ const TaskDetails = () => {
     })
     .then(() => getTask())
     .then(() => handleEditClick())
-    //createTask(updateTask)
-    //console.log(updateTask)
+    .catch((err) => console.log(err))
   }
 
   function handleChange(e){

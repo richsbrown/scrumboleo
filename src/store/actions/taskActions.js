@@ -1,5 +1,3 @@
-// we could also just add the db, collection, addDoc from importing them
-// directly into the file instead of through thunk on the index.js file
 import { db } from '../../config/firebaseConfig'; 
 import { collection, addDoc, doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 import { v4 as uuidv4 } from 'uuid';
