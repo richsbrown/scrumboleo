@@ -4,38 +4,13 @@ import { Link } from 'react-router-dom';
 import TaskSummary from './TaskSummary';
 import { TiDelete } from 'react-icons/ti';
 import { db } from '../../config/firebaseConfig'; 
-import { collection, 
-  addDoc, 
-  doc, 
-  updateDoc, 
-  arrayUnion, 
-  arrayRemove, 
-  query, 
-  where, 
-  getDoc, 
-  update, 
-  FieldValue,
-  deleteDoc
-} from "firebase/firestore";
+import { doc, updateDoc, deleteDoc } from "firebase/firestore";
 
 const TaskList = (props) => {
 
   const tasks = props.tasks
   const uid = props.uid;
   const getTasks = props.getTasks
-
-  // console.log('tasks', tasks)
-  //console.log('uid', uid)
-
-  // async function handleClick(e){
-  //   let taskId = await e.target.getAttribute('taskidkey')
-  //   console.log('taskList handleClick', 'taskId', taskId, 'uid', uid)
-  //   const docRef = doc(db, 'tasks', taskId)
-  //   deleteDoc(docRef)
-  //   .then(() => {
-  //     getTasks()
-  //   })
-  // }
 
   // PROMISE HANDLE DELETE CLICK
   function handleClick(e){
@@ -44,7 +19,6 @@ const TaskList = (props) => {
       let taskId = e.target.getAttribute('taskidkey')
       if(taskId){
         res(taskId)
-        // console.log('taskList handleClick', 'taskId', taskId, 'uid', uid)
       }
     })
     
@@ -80,10 +54,6 @@ return (
           <div className="taskCard" key={task.id}>
 
             <div className="taskCardHeader">
-                {/* <button taskidkey={task.id}
-                onClick={handleClick}
-                className='deleteButton'
-                ></button> */}
                 <TiDelete
                 taskidkey={task.id}
                 onClick={handleClick}
@@ -97,7 +67,6 @@ return (
                 </Link>
 
               <div className="taskCardFooter">
-                {/* <p className='phase_icon'>Phase</p> */}
                 <select
                   className='phase_select' 
                   name="phase"
