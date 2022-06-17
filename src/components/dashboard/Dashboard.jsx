@@ -198,7 +198,7 @@ const Dashboard = (props) => {
         type="text"
         value={projectTitle}
         onChange={(e) => setProjectTitle(e.target.value)}
-        /> : <span>{projectTitle}</span>}
+        /> : <span title='Project Title'>{projectTitle}</span>}
         {edit && <button className='save_button'>save</button>}
       </form>
       <VscEdit className='edit_button' title='Edit Project Title' onClick={handleEditClick}/>

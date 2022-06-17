@@ -161,3 +161,11 @@ a:visited {
     -webkit-appearance: menulist-button;
     color: white;
   } */
+
+
+  @media (max-width: 500px){
+
+    .taskList{
+        min-width: 273px;
+    }
+  }
