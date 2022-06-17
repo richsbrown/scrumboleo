@@ -121,9 +121,9 @@
     }
 
     .navbar_signedOutLinks{
-        transform: scale(0.5);
+        transform: scale(0.7);
         width: 128px;
-        margin-right: -60px;
+        margin-right: -50px;
     }
 
    
