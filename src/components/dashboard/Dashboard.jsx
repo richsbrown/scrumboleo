@@ -177,7 +177,7 @@ const Dashboard = (props) => {
 
   function handleSubmit(event){
     event.preventDefault();
-    const uid = user.uid
+    const uid = auth.currentUser.uid
     const docRef = doc(db, 'users', uid)
     updateDoc(docRef, {
       projectTitle: projectTitle
