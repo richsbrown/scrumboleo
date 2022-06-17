@@ -24,6 +24,7 @@
     overflow-y: scroll;
     border: 1px rgb(207, 206, 206) solid;
     min-width: 400px;
+    max-width: 400px;
     padding: 20px;
     border-radius: 50px;
     /* border: none; */
