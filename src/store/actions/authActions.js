@@ -1,13 +1,9 @@
 import { 
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
-    signOut,
-    setPersistence, 
-    browserLocalPersistence, 
-    browserSessionPersistence,
-    inMemoryPersistence 
+    signOut 
 } from '@firebase/auth';
-import { addDoc, collection, doc, setDoc  } from 'firebase/firestore';
+import { doc, setDoc  } from 'firebase/firestore';
 import { auth, db } from '../../config/firebaseConfig';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -40,7 +36,7 @@ export const logOut = () => {
 }
 
 export const signUpWithEmail = (newUser) => {
-    return(dispatch, getState, { }) => {
+    return(dispatch, getState) => {
         createUserWithEmailAndPassword(
             auth,
             newUser.email,
@@ -53,7 +49,7 @@ export const signUpWithEmail = (newUser) => {
                 email: newUser.email,
                 //tasks: [],
                 technologies: [],
-                projectTitle: 'add a project title',
+                projectTitle: 'Add a project title -->',
                 projectId: uuidv4()
         })
         }) .then(() => {

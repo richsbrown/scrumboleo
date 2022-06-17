@@ -1,6 +1,6 @@
 import { auth } from '../../config/firebaseConfig';
 import { db } from '../../config/firebaseConfig'; 
-import { collection, query, getDocs, doc, getDoc } from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 //import { async } from '@firebase/util';
 
 const initState = {
@@ -18,8 +18,8 @@ const firebaseReducer = (state = initState, action) => {
             }
         case 'GET_USER_PROFILE':
             //console.log('get user profile')
-            //const userRef = auth.currentUser
-            const userData = getDoc(doc(db, 'users', state.user.uid))
+            const userUID = auth.currentUser.uid
+            const userData = getDoc(doc(db, 'users', userUID))
             //console.log('userData', userData)
             userData
             .then((response) => {
