@@ -121,10 +121,13 @@
     }
 
     .navbar_signedOutLinks{
-        transform: scale(0.8);
+        transform: scale(0.5);
         width: 128px;
-        margin-right: -28px;
+        margin-right: -50px;
+        border: 1px red solid
     }
+
+   
 
     .navbar_signedInLinks{
         transform: scale(0.7);
@@ -135,7 +138,7 @@
     .navbar_title{
         transform: scale(0.7);
         width: 500px;
-        margin-left: -60px;
+        margin-left: -70px;
         /* margin-right: -40px; */
     }
 
