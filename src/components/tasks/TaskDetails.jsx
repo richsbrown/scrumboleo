@@ -8,7 +8,6 @@ import { VscEdit } from 'react-icons/vsc';
 import { TiDelete } from 'react-icons/ti';
 import { CircularProgress } from '@mui/material';
 import './taskDetails.css';
-import moment from 'moment'
 
 const TaskDetails = () => {
 
@@ -149,7 +148,7 @@ const TaskDetails = () => {
             { !edit ? 
             <div className='styled_row'>
               <span className="heading">Phase: </span>
-              <span className="taskDetails_phase">{task.data.phase == 'wip' ? 'work in progress' : task.data.phase}</span>
+              <span className="taskDetails_phase">{task.data.phase === 'wip' ? 'work in progress' : task.data.phase}</span>
             </div>
             :  
             <div className='styled_row'>
