@@ -8,7 +8,7 @@ import './navbar.css';
 
 const Navbar = (props) => {
 
-  const { auth } = props;
+  const { auth, userProfile } = props;
 
   return (
     <div>
@@ -30,6 +30,7 @@ const Navbar = (props) => {
 const mapStateToProps = (state) => {
   return {
     auth: state.auth.user,
+    userProfile: state.firebase.userProfile
   }
 }
 
