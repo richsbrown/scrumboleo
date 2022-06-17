@@ -2,8 +2,8 @@ import React from 'react'
 import './dashboard.css';
 import { connect } from 'react-redux';
 import { auth, db } from '../../config/firebaseConfig'; 
-import { collection, query, where, getDocs, QuerySnapshot, onSnapshot, doc, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
-import { useState, useEffect, useReducer, useCallback } from 'react';
+import { collection, query, where, getDocs, doc, getDoc, updateDoc, deleteDoc } from "firebase/firestore";
+import { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { NavLink } from 'react-router-dom';
 import TaskList from '../tasks/TaskList';
@@ -249,7 +249,6 @@ const Dashboard = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  //console.log('dashboard state', state)
   return {
     uid: state.firebase.user?.uid,
     projectId: state.firebase.userProfile?.projectId,

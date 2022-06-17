@@ -7,13 +7,6 @@ import './createTask.css';
 
 const CreateTask = (props) => {
 
-  // const { auth } = props
-  // if(!auth) navigate("/");
-
-  //const [title, setTitle] = useState('');
-  //const [content, setContent] = useState('');
-  //const input = {title, content}
-
   const navigate = useNavigate();
 
   const [task, setTask] = useState({
@@ -27,9 +20,6 @@ const CreateTask = (props) => {
   function handleSubmit(event){
     event.preventDefault();
     props.createTask(task)
-    console.log(task)
-    //setTitle('')
-    //setContent('')
     setTask({title:'', owner:'', details:'', phase: 'planning', hours: 0})
     navigate("/");
   }
@@ -135,10 +125,6 @@ const CreateTask = (props) => {
   )
 }
 
-// createPoject is now an action on the props, 
-// which will call the action creator createProject, 
-// and then dispatch and pass the project data to it
-// dispatch is used to make sure the action does not get called from just anywhere
 const mapDispatchToProps = (dispatch) => {
   return {
     createTask: (task) => dispatch(createTask(task))
@@ -147,7 +133,6 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
-    //authError: state.auth.authError,
     auth: state.auth.user
   }
 }
