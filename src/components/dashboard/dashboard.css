@@ -8,8 +8,6 @@
 .dashboard_container{
     display: flex;
     margin-left: 25px;
-    /* flex-direction: row;
-    justify-content: space-between; */
     overflow-x: auto;
     /* scroll-snap-type: x mandatory; */
 }
@@ -25,7 +23,6 @@
     align-items: center;
     padding: 20px;
     margin: 10px;
-    /* border: 1px black solid; */
     border-radius: 50px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 44px;
@@ -67,7 +64,6 @@
     width: 150px;
     text-align: center;
     background-color: black;
-    /* border: 1px black solid; */
 }
 
 .addTask_button_mini{
@@ -176,15 +172,11 @@
     }
 
     .project_title{
-        /* font-size: 30px; */
         transform: scale(0.80);
-        /* visibility:hidden; */
-        /* margin-bottom: -80px; */
         margin-bottom: -26px;
     }
 
     .title_input_dashboard{
-        /* transform: scale(0.60); */
         font-size: 30px;
         width: 200px;
         margin-bottom: 10px;
@@ -192,14 +184,10 @@
 
     .edit_button{
        margin-top: 15px;
-       /* transform: scale(0.80); */
     }
 
     .reset_button{
-        /* visibility: hidden; */
-        /* margin-bottom: -30px; */
         margin-right: -5px;
-        /* transform: scale(0.80); */
     }
 
     .deleteAll_modal{
@@ -210,7 +198,7 @@
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 490px){
 
     .dashboard_container{
         margin-left: 0px;

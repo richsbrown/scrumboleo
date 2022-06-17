@@ -1,11 +1,9 @@
 .phase{
-    /* border: 1px red solid; */
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    /* border-radius: 50px; */
 }
 
 .taskListTitle{
@@ -27,12 +25,9 @@
     max-width: 400px;
     padding: 20px;
     border-radius: 50px;
-    /* border: none; */
 }
 
 .taskCard{
-    /* box-shadow: 3px 3px 3px 0 rgb(131, 131, 131); */
-    /* border: 1px black solid; */
     padding: 30px;
     margin: 10px;
     border-radius: 50px;
@@ -113,33 +108,6 @@ a:visited {
     text-decoration: none;
   }
 
-/* .phase_icon{
-    cursor: pointer;
-}
-
-.phase_select{
-    display: none;
-    visibility: hidden;
-}
-    
-.phase_icon:hover + .phase_select {
-    display: block;
-    z-index: 10;
-    cursor: pointer;
-    border-radius: 100px;
-    width: 110px;
-    height: 30px;
-    border: none;
-    appearance: none;
-    visibility: visible;
-}
-
-.phase_icon:hover {
-    display: none;
-    z-index: -10;
-    visibility: hidden;
-} */
-
 .phase_select{
     border-radius: 100px;
     width: 40px;
@@ -153,17 +121,7 @@ a:visited {
     background-size: 20px;
 }
 
-/* .phase_select option {
-    color: white !important
-  } */
-
-  /* select {
-    -webkit-appearance: menulist-button;
-    color: white;
-  } */
-
-
-  @media (max-width: 500px){
+  @media (max-width: 490px){
 
     .taskList{
         min-width: 273px;

@@ -184,8 +184,6 @@ const Dashboard = (props) => {
     })
     .then(() => getProjectTitle())
     .then(() => handleEditClick())
-    //createTask(updateTask)
-    console.log(projectTitle)
   }
   
   return (

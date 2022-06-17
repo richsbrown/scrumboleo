@@ -2,23 +2,18 @@ import React from 'react';
 import './homepage.css';
 import zenCoder from '../../assets/zenCoder.jpeg';
 import addTask from '../../assets/addTask.png';
-import dashboard from '../../assets/dashboard.png'
-import deleteTasks from '../../assets/deleteAll.png'
-import maracasMan from '../../assets/maracasMan.svg'
-import maracas from '../../assets/maracas.svg'
+import dashboard from '../../assets/dashboard.png';
+import deleteTasks from '../../assets/deleteAll.png';
 
 const Homepage = () => {
   return (
     <div>
     <div className='homepage_banner'>
-    {/* <img src={maracas} alt='maracas'/> */}
     <img src={zenCoder} alt='zen coder'/>
-    {/* <div className='slogan'>Go Agile</div> */}
     {/* <button className='btn'>Sign In / Sign Up</button>     */}
     </div>
     <div>
     <div className="howTo">
-    {/* <span className='howTo_Title'>How to Scrumboleo</span> */}
     <p className='howTo_copy'>
       Add some SCRUM to your development process. 
     </p>
