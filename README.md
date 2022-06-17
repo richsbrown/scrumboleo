@@ -1,8 +1,12 @@
+# Checkout Scrumboleo
+https://scrumboleo.netlify.app/
+
+
 # What is Scrumboleo?
 
 Scrumboleo is a web application that enables developers to easily add some scrum to their development process. Once a user signs up they are directed to their very own project dashboard, where the user can add a project title and all the tasks they have to do to complete the project.
 
-Users can add a task title, owner, task details, phase, and estimated number of hours to complete each task. As the user begins working on a task they can move the task from the 'Planning' phase to the 'Work in Progress (WIPS)' phase by clicking the phase arrow on task summary, or via the task details page. Once the task is complete the user can move the task to the 'Completed' phase. Tasks that are in Planning and WIPS add to the 'Total Hours' shown on the dashboard bar. When a task is moved to 'Completed' the hours assigned to the task is subtracted from to the total estimated hours left to complete the project.
+Users can add a task title, owner, task details, phase, and estimated number of hours to complete each task. As the user begins working on a task they can move the task from the 'Planning' phase to the 'Work in Progress (WIPS)' phase by clicking the phase arrow on task summary, or via the task details page. Once the task is complete the user can move the task to the 'Completed' phase. Tasks that are in 'Planning' and 'WIPS' add to the 'Total Hours' shown on the dashboard bar. When a task is moved to 'Completed' the hours assigned to the task is subtracted from to the total estimated hours left to complete the project.
 
 Users can easily edit all task details at anytime from the task details page, and delete tasks individually by clicking the 'x' icon on the task summary or on the task details page. Once the project is complete users can delete all tasks by clicking the refresh icon at the far right of the dashboard bar.
 
@@ -24,7 +28,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Install all dependencies.
 
-Setup a Firebase app at (firebase.google.com).
+Setup a Firebase app at (https://firebase.google.com/).
 
 Add a .ENV file with all config variables and values to the root of the project.
 
