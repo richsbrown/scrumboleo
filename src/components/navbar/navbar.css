@@ -17,6 +17,11 @@
     
 }
 
+.maracas_logo{
+   height: 30px;
+   width: 30px;
+}
+
 .navbar_links{
     display: flex;
     flex-direction: row;
@@ -110,10 +115,16 @@
     }
 
     .linkItem a{
-        font-size: 15px;
+        margin-top: 8px;
+        font-size: 14px;
         width: 55px;
         /* border: 1px red solid; */
     }
+
+    .maracas_logo{
+        height: 22px;
+        width: 22px;
+     }
 
     .navbar_signedInLinks{
         /* transform: scale(0.7); */
