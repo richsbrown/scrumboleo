@@ -105,7 +105,7 @@
     .navbar_signedOutLinks{
         /* transform: scale(0.7); */
         width: 140px;
-        margin-right: -70px;
+        margin-right: -40px;
         /* border: 1px red solid; */
     }
 
@@ -127,7 +127,7 @@
     }
 
     .navbar_title a {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .navbar_links{
