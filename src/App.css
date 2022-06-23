@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+} */
+
 .appName{
     font-family: Major Mono Display;
     font-size: 33px;
