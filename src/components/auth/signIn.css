@@ -44,7 +44,12 @@
 
 @media (max-width: 490px){
 
+    .container{
+        margin-top: 70px;
+    }
+    
     .form{
         width: 273px;
+        padding: 5px;
     }
   }
