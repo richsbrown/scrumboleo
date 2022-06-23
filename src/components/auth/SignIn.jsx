@@ -41,7 +41,7 @@ const SignIn = (props) => {
   return (
     <div className='container'>
    <form
-      className='white' 
+      className='form' 
       onSubmit={handleSubmit}
       >
         <h5 className="title">Login</h5>
