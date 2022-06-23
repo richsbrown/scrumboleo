@@ -45,11 +45,14 @@
 @media (max-width: 490px){
 
     .container{
-        margin-top: 70px;
+        margin-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     
-    .form{
-        width: 273px;
+    /* .form{
+        max-width: 273px;
+        min-width: 273px;
         padding: 5px;
-    }
+    } */
   }
