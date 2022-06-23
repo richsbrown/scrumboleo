@@ -103,20 +103,31 @@
     }
 
     .navbar_signedOutLinks{
-        transform: scale(0.7);
-        width: 128px;
-        margin-right: -50px;
+        /* transform: scale(0.7); */
+        width: 140px;
+        margin-right: -70px;
+        /* border: 1px red solid; */
+    }
+
+    .linkItem a{
+        font-size: 15px;
+        width: 55px;
+        /* border: 1px red solid; */
     }
 
     .navbar_signedInLinks{
-        transform: scale(0.7);
+        /* transform: scale(0.7); */
         margin-right: -40px;
     }
 
     .navbar_title{
-        transform: scale(0.7);
+        /* transform: scale(0.7); */
         width: 500px;
-        margin-left: -70px;
+        margin-left: -35px;
+    }
+
+    .navbar_title a {
+        font-size: 28px;
     }
 
     .navbar_links{
