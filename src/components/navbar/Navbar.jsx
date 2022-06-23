@@ -14,7 +14,7 @@ const Navbar = (props) => {
     <div>
       <div className='navbar'>
       <div className='navbar_title'>
-      <NavLink to='/'>SCRUMBOLEO
+      <NavLink className={'scrumboleo_title'} to='/'>SCRUMBOLEO
          <img className='maracas_logo' src={maracas} alt={'maracas'}/>
       </NavLink>
       </div>
