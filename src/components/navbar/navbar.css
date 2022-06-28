@@ -149,7 +149,7 @@
         margin-right: -15px;
         width: 140px;
         font-size: 14px;
-        border: 1px red solid;
+        /* border: 1px red solid; */
     }
 
     .navbar_title{
