@@ -185,4 +185,26 @@
         min-width: 273px;
     }
 
+    @media (max-width: 490px){
+
+        .createTask_container{
+            margin-top: 40px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-left: 2px;
+            margin-right: 2px;
+            max-width: 273px;
+            min-width: 273px;
+        }
+    
+        .title_input{
+            width: 255px;
+        }
+    
+        .owner_input{
+            width: 230px;
+        }
+    
+      }
+
   }
