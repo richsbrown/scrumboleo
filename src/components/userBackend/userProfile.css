@@ -68,3 +68,15 @@
         transform: scale(0.80);
     }
 }
+
+@media (max-width: 490px){
+
+    .userProfile_container{
+        margin-top: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 273px;
+        min-width: 273px;
+    }
+
+  }
