@@ -8,13 +8,14 @@
 .dashboard_container{
     display: flex;
     margin-left: 25px;
-    overflow-x: auto;
-    /* scroll-snap-type: x mandatory; */
+    overflow: auto;
+    scroll-snap-type: x mandatory;
 }
 
-/* .dashboard_child{
+.dashboard_container .taskList{
+    flex-shrink: 0;
     scroll-snap-align: start;
-} */
+}
 
 .dashboard_header{
     display: flex;

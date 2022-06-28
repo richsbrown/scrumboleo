@@ -229,9 +229,9 @@ const Dashboard = (props) => {
    } 
    else if(tasks.length > 0){
    return <div className='dashboard_container'>
-            <TaskList tasks={planningTasks} title={'Planning'} uid={user?.uid} getTasks={getTasks}/>
-            <TaskList tasks={wipTasks} title={'WIPS'} uid={user?.uid} getTasks={getTasks}/>
-            <TaskList tasks={completeTasks} title={'Completed'} uid={user?.uid} getTasks={getTasks}/>
+            <TaskList className='taskList' tasks={planningTasks} title={'Planning'} uid={user?.uid} getTasks={getTasks}/>
+            <TaskList className='taskList' tasks={wipTasks} title={'WIPS'} uid={user?.uid} getTasks={getTasks}/>
+            <TaskList className='taskList' tasks={completeTasks} title={'Completed'} uid={user?.uid} getTasks={getTasks}/>
           </div> 
    } else {
     return <div className="circleP_Container"> 
