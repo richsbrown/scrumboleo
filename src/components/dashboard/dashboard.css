@@ -217,7 +217,7 @@
        opacity: 88%; 
     }
 
-    .taskList{
+    .dashboard_container .taskList{
         margin-left: 3px;
     }
 }
