@@ -216,4 +216,8 @@
        margin-top: -20px;
        opacity: 88%; 
     }
+
+    .taskList{
+        margin-left: 3px;
+    }
 }
