@@ -196,9 +196,14 @@
             max-width: 273px;
             min-width: 273px;
         }
+
+        .taskDetails_title{
+            font-size: 30px;
+        }
     
         .title_input{
             width: 255px;
+            font-size: 30px;
         }
     
         .owner_input{
