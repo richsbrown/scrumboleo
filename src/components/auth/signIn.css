@@ -30,6 +30,11 @@
     margin-top: 30px;
 }
 
+.input-field button:disabled {
+    background-color: rgb(168, 168, 168);
+    border: rgb(168, 168, 168);
+}
+
 .error_msg{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 14px;

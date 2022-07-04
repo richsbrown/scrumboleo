@@ -22,6 +22,7 @@ const SignUp = (props) => {
     }, 4000)
   }, [authError])
 
+  const canSubmit = firstName && lastName && email && password ? true : false
 
   function handleSubmit(event){
     event.preventDefault();
@@ -89,7 +90,7 @@ const SignUp = (props) => {
         </div>
 
         <div className="input-field">
-          <button>
+          <button disabled={!canSubmit}>
             Sign Up
           </button>
           <div className='errorMsg_container'>
