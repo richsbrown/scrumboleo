@@ -13,7 +13,7 @@ const SignedInLinks = (props) => {
   return (
        <ul className='navbar_signedInLinks'>
        <li className='linkItem_singedIn'><NavLink to='/profile'><CgProfile className='profile_icon' title='Your Profile'/></NavLink></li>
-       <li className='linkItem_signedIn'><a onClick={signOut}>Logout</a></li>
+       <li className='linkItem_signedIn'><a style={{cursor: "pointer"}} onClick={signOut}>Logout</a></li>
      </ul>
   )
 }
