@@ -1,10 +1,48 @@
-# Getting Started with Create React App
+# What is Scrumboleo?  
+#### hosted at: https://scrumboleo.netlify.app/
+
+Scrumboleo is a React web application that enables developers to easily add some scrum to their development process. Once a user signs up they are directed to their very own project dashboard, where the user can add a project title and map out and manage all tasks required to complete the project/sprint.
+
+Each task enables the user to track WHAT the task is, WHO is working on it (if their is a team), WHICH phase the task is in (i.e. Planning, WIPS, Complete), HOW long it should take, and enter a breakdown of the task's details as well. As the user begins working on a task they can move the task from the 'Planning' phase to the 'Work in Progress (WIPS)' phase by clicking the phase arrow on the task summary, or via the task details page. Once the task is complete the user can move the task to the 'Completed' phase. Tasks that are in 'Planning' and 'WIPS' add to the 'total estimated hours left' shown on the dashboard bar. When a task is moved to 'Completed' the hours assigned to the task are subtracted from to the total estimated hours left to complete the project.
+
+Users can easily edit all task details at anytime from the task details page, and delete tasks individually by clicking the 'x' icon on the task summary or on the task details page. Once the project is complete users can delete all tasks by clicking the refresh icon at the far right of the dashboard bar.
+
+Users can visit their profile page, where they can update their profile info, such as first name, last name, email, and password, as well as, delete their user account.
+
+### Scrumboleo V2 Updates
+####    - Mobile 1st Design
+####    - Migration to Typescript
+####    - Migration to Redux Tool Kit
+####    - Updated Dashboard Bar
+####    - NEW Delete Account Feature
+
+Happy scrumming!!!
+
+### App Prototyped in Figma
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Figma%20Prototype.png)
+
+
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Home%20Mobile.png)
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Dashboard%20Mobile.png)
+
+
+
+
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Install all dependencies.
+
+Setup a Firebase app at (https://firebase.google.com/).
+
+Add a .ENV file with all config variables and values to the root of the project.
+
 
 ## Available Scripts
 
 In the project directory, you can run:
+
 
 ### `npm start`
 
@@ -14,33 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Tech Stack
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Tech%20Stack%20logos.png)
