@@ -1,5 +1,5 @@
 # What is Scrumboleo? 
-### https://www.scrumboleo.com/
+### https://www.scrumboleo.com
 
 Scrumboleo is a React web application that enables developers to easily add some scrum to their development process. Once a user signs up they are directed to their very own project dashboard, where the user can add a project title and map out and manage all tasks required to complete the project/sprint.
 
