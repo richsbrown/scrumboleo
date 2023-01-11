@@ -8,12 +8,6 @@ import { store, persistor } from './redux/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 
-import { useAppDispatch, useAppSelector } from './redux/hooks'
-import { getAllTasks } from './features/tasks/taskSlice'
-
-// const projectId = store.getState().auth.userProfile?.projectId
-// store.dispatch(getAllTasks(projectId!))
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

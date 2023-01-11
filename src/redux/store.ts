@@ -22,15 +22,9 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) => 
        getDefaultMiddleware({
         serializableCheck: false 
-        // {
-        //     ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-        //   },
-       }),//.concat([productApi.middleware]),
+       }),
 })
 
-
-// Infer the RootState and AppDispatch types from the store itself, means that they’ll correctly update as you add more state slices, API services or modify middleware settings
-//export default store
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch
 export const persistor = persistStore(store);

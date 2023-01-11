@@ -19,7 +19,6 @@
     align-items: center;
     margin-left: -40px;
     margin-top: 5px;
-    /* border: 1px blue solid; */
 }
 
 .hours-container {
@@ -57,7 +56,6 @@
     margin-bottom: -25px;
     margin-left: 50px;
     margin-right: 5px;
-    /* border: 1px red solid; */
 }
 
 .project-title-form{
@@ -68,7 +66,6 @@
     gap: 0.5px;
     height: 20px;
     margin-top: -10px;
-    /* border: 1px red solid; */
 }
 
 .projectTitle {
@@ -78,7 +75,6 @@
     font-weight: bold;
     width: 150px;
     word-wrap: break-word;
-    /* border: 1px solid rgb(17, 0, 255) */
 }
 
 .title-input-dashboard{
@@ -90,7 +86,6 @@
     border: none;
     border-bottom: 1px solid black;
     background-color: white;
-    /* border: 1px solid rgb(4, 255, 0); */
 }
 
 .save-button{
@@ -159,8 +154,6 @@
     .project-title-container{
         margin: 0;
         width: 440px;
-
-        /* transform: scale(1.10); */
     }
     .project-title-form{
         margin: 0;

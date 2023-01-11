@@ -1,9 +1,5 @@
-import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import { useAppDispatch, useAppSelector } from './redux/hooks';
-import { getUserProfile } from './features/auth/authSlice'
-import { getAllTasks } from './features/tasks/taskSlice'
-import { auth, db } from './config/firebaseConfig';
+import { useAppSelector } from './redux/hooks';
 import './App.css';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
@@ -16,32 +12,20 @@ import Userprofile from './pages/userBackend/Userprofile';
 function App() {
 
   const user = useAppSelector((state) => state.auth.user)
-  // const projectId = useAppSelector((state) => state.auth.userProfile?.projectId);
-  // const dispatch = useAppDispatch()
-  // useEffect(() => {
-  //   console.log('getting user and tasks')
-  //   dispatch(getAllTasks(projectId!))
-  // }, [user, projectId])
 
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-
           {user 
             ? <Route path='/' element={<Dashboard />} />
             : <Route path='/' element={<HomePage />} />
           }
-
           <Route path='/signin' element={<SignIn />} />
           <Route path='/signup' element={<SignUp />} />
-
           {user && <Route path='/addtask' element={<AddTask />} />}
-
           {user && <Route path='/task/:id' element={<TaskDetails />} />}
-
           {user && <Route path='/userprofile' element={<Userprofile />} />}
-       
         </Routes>
       </div>
     </BrowserRouter>
