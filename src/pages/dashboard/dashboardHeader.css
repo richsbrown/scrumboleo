@@ -136,7 +136,7 @@
     cursor: pointer;
 }
 
-@media (min-width: 600px){
+@media (min-width: 1400px){
     .container-dashboard-header {
         border-radius: 50px;
         flex-direction: row;
