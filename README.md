@@ -18,12 +18,13 @@ Users can visit their profile page, where they can update their profile info, su
 
 Happy scrumming!!!
 
-### App Prototyped in Figma
+### Application Prototyped in Figma
 ![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Figma%20Prototype.png)
 
 
-![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Home%20Mobile.png)
-![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Dashboard%20Mobile.png)
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Home%20Full%20Screen.png)
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Dashboard%20Full%20Screen.png)
+![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Delete%20All%20Tasks.png)
 
 
 
