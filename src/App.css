@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap');
+
+body {
+  background-color: #F5F5F5;
+}
+
+.nav-container{
+  display: flex;
+  align-items: center;
+  width: 86vw;
+  justify-content: space-between;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.nav3-container{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  width: 86vw;
+  justify-content: space-between;
+}
+
+.scrumboleoText {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 50px;
+  color: #303030;
+  cursor: pointer;
+}
+
+.main-menu {
+  width: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 8px;
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+@media (min-width: 600px){
+  .nav-container{
+      width: 40vw;
+  }
+  .nav3-container{
+    width: 35vw;
+  }
+}
+
+/* .App {
+  text-align: center;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,0 +1,41 @@
+.navDashboard-container{
+  display: flex;
+  align-items: center;
+  width: 86vw;
+  justify-content: space-between;
+}
+
+.scrumboleo-text-navbar{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 30px;
+  color: #303030;
+  /* cursor: pointer; */
+  margin-left: -10px;
+}
+
+.backArrow{
+  cursor: pointer;
+}
+
+.navbar-btns{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-btn{
+  color: black;
+  cursor: pointer;
+}
+
+.logout-btn{
+  border: none;
+  cursor: pointer;
+  background-color: #F5F5F5;
+}
+
+@media (min-width: 600px){
+  .navDashboard-container{
+    width: 86vw;
+  }
+}
