@@ -9,6 +9,9 @@ Users can easily edit all task details at anytime from the task details page, an
 
 Users can visit their profile page, where they can update their profile info, such as first name, last name, email, and password, as well as, delete their user account.
 
+Happy scrumming!!!
+
+
 ### Scrumboleo V2 Updates
 ####    - Mobile 1st Design
 ####    - Migration to Typescript
@@ -16,7 +19,6 @@ Users can visit their profile page, where they can update their profile info, su
 ####    - Updated Dashboard Bar
 ####    - NEW Delete Account Feature
 
-Happy scrumming!!!
 
 ### Prototyped in Figma
 ![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Figma%20Prototype.png)
