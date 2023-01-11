@@ -74,13 +74,6 @@ function Userprofile() {
       await dispatch(deleteUserAccount(user))
       alert('Account Deleted Successfully')
       navigate('/')
-      
-      // delete all user tasks by passing tasks array
-      // reset taskSlice to initialState
-      // delete user document in users collection passing userId
-      // delete user credentials from authentication db
-      // reset authSice to initialState
-      // navigate('/') if necessary
     }
 
     return (
