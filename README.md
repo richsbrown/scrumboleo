@@ -61,5 +61,4 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 
-# Tech Stack
 ![screenshot](https://github.com/richsbrown/scrumboleo/blob/master/src/assets/Sv2%20Tech%20Stack%20logos.png)
