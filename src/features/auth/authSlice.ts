@@ -1,11 +1,8 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit'
-import { store } from '../../redux/store';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateEmail, updatePassword, deleteUser } from '@firebase/auth';
 import { doc, getDoc, getDocs, setDoc, updateDoc, deleteDoc, collection, query, where, DocumentSnapshot, DocumentData } from 'firebase/firestore';
 import { auth, db } from '../../config/firebaseConfig';
 import { v4 as uuidv4 } from 'uuid';
-import { async } from '@firebase/util';
-
 
 type UserProfile = {
     email: string
@@ -40,6 +37,19 @@ type CredentialsSignUp = {
 type Response = {
     uid: string;
     userData: Promise<DocumentSnapshot<DocumentData>>;
+}
+
+type UserProfileData = {
+    user: string | null
+    firstName: string | undefined
+    lastName: string | undefined
+    email: string
+    newPassword?: string
+}
+
+type ProjectTitleData = {
+    user: string | null
+    projectTitle: string | undefined
 }
 
 const initialState: InitialState = {
@@ -123,13 +133,13 @@ export const getUserProfile = createAsyncThunk ('auth/getUserProfile', (user: st
         })
 })
 
-export const updateUserProfile = createAsyncThunk('auth/updateUserProfile', async (data: any) => {
+export const updateUserProfile = createAsyncThunk('auth/updateUserProfile', async (data: UserProfileData) => {
     try{
-        const docRef = doc(db, 'users', data.user)
+        const docRef = doc(db, 'users', data.user!)
         await updateDoc(docRef, {
             firstName: data.firstName,
             lastName: data.lastName,
-            initials: data.firstName[0] + data.lastName[0],
+            initials: data.firstName && data.lastName ? data.firstName[0] + data.lastName[0] : undefined,
             email: data.email
         })
         await updateEmail(auth.currentUser!, data.email)
@@ -141,9 +151,9 @@ export const updateUserProfile = createAsyncThunk('auth/updateUserProfile', asyn
     }  
 })
 
-export const updateProjectTitle = createAsyncThunk('auth/updateProjectTitle', (data: any) => {
+export const updateProjectTitle = createAsyncThunk('auth/updateProjectTitle', (data: ProjectTitleData) => {
    try {
-    const docRef = doc(db, 'users', data.id)
+    const docRef = doc(db, 'users', data.user!)
     updateDoc(docRef, {
       projectTitle: data.projectTitle
     })
@@ -152,9 +162,9 @@ export const updateProjectTitle = createAsyncThunk('auth/updateProjectTitle', (d
    } 
 })
 
-export const deleteUserAccount = createAsyncThunk('auth/deleteUserAccount', async (user: any) => {
+export const deleteUserAccount = createAsyncThunk('auth/deleteUserAccount', async (user: string | null) => {
     try {
-        const docRef = doc(db, 'users', user)
+        const docRef = doc(db, 'users', user!)
         await deleteDoc(docRef)
         await deleteUser(auth.currentUser!)
     } catch (err) {
@@ -187,8 +197,8 @@ const authSlice = createSlice({
         })
         builder.addCase(signInWithEmail.rejected, (state) => {
             state.user = null
-            state.error = 'Something went wrong'
             state.loading = false
+            state.error = 'Something went wrong'
         })
 
         builder.addCase(signUpWithEmail.pending, (state) => {
@@ -206,8 +216,8 @@ const authSlice = createSlice({
         })
         builder.addCase(signUpWithEmail.rejected, (state) => {
             state.user = null
-            state.error = 'Something went wrong'
             state.loading = false
+            state.error = 'Something went wrong'
         })
 
         builder.addCase(logout.pending, (state) => {
@@ -222,8 +232,8 @@ const authSlice = createSlice({
         builder.addCase(logout.rejected, (state) => {
             state.user = null
             state.userProfile = null
-            state.error = 'Something went wrong!'
             state.loading = false
+            state.error = 'Something went wrong!'
         })
 
         builder.addCase(getUserProfile.pending, (state) => {
@@ -239,8 +249,8 @@ const authSlice = createSlice({
             }
         })
         builder.addCase(getUserProfile.rejected, (state) => {
-            state.error = 'Something went wrong!'
             state.loading = false
+            state.error = 'Something went wrong!'
         })
 
         builder.addCase(updateUserProfile.pending, (state) => {
@@ -251,6 +261,7 @@ const authSlice = createSlice({
         })
         builder.addCase(updateUserProfile.rejected, (state) => {
             state.loading = false
+            state.error = 'Something Went Wrong'
         })
 
         builder.addCase(updateProjectTitle.pending, (state) => {
@@ -261,6 +272,7 @@ const authSlice = createSlice({
         })
         builder.addCase(updateProjectTitle.rejected, (state) => {
             state.loading = false
+            state.error = 'Something Went Wrong'
         })
 
         builder.addCase(deleteUserAccount.pending, (state) => {
@@ -279,8 +291,8 @@ const authSlice = createSlice({
     }
 })
 
- export default authSlice.reducer // default export
- export const { resetError } = authSlice.actions // named export
+ export default authSlice.reducer
+ export const { resetError } = authSlice.actions
 
 // module.exports = authSlice.reducer
 // module.exports.signInWithEmail = signInWithEmail

@@ -17,7 +17,7 @@ function DashboardHeader() {
     const projectId = userProfile?.projectId
     const dispatch = useAppDispatch()
   
-    const [projectTitle, setProjectTitle] = useState<any>(userProfile?.projectTitle)
+    const [projectTitle, setProjectTitle] = useState<string | undefined>(userProfile?.projectTitle)
     const [edit, setEdit] = useState<boolean>(false)
     const [deleteAllModal, setDeleteAllModal] = useState<boolean>(false)
     
@@ -41,8 +41,8 @@ function DashboardHeader() {
 
     const handleUpdateProjectTitle = async (e: any) => {
         e.preventDefault()
-        await dispatch(updateProjectTitle({projectTitle, id: user}))
-        await dispatch(updateProjectTitle({projectTitle, id: user}))
+        await dispatch(updateProjectTitle({projectTitle, user}))
+        await dispatch(updateProjectTitle({projectTitle, user}))
         await dispatch(getUserProfile(user!))
         await dispatch(getUserProfile(user!))
         setEdit(!edit)
