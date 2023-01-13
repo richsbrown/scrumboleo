@@ -8,10 +8,10 @@ import './auth.css'
 
 function SignUp() {
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    let [firstName, setFirstName] = useState('')
+    let [lastName, setLastName] = useState('')
+    let [email, setEmail] = useState('')
+    let [password, setPassword] = useState('')
     const navigate = useNavigate()
     
     const user = useAppSelector((state) => state.auth.user)
@@ -30,6 +30,12 @@ function SignUp() {
         alert('All Fields Are Required')
         return
       }
+
+      firstName = firstName.trim()
+      lastName = lastName.trim()
+      email = email.trim()
+      password = password.trim()
+
       dispatch(signUpWithEmail({firstName, lastName, email, password}))
       setFirstName('')
       setLastName('')

@@ -23,15 +23,16 @@ async function handleDeleteTask (taskId: string) {
   await dispatch(deleteTask(taskId))
   await dispatch(deleteTask(taskId))
   getTasks()
+  setRenderComponent(!renderComponent)
 }
 
 async function handleChangePhase (e: any) {
   e.preventDefault()
   const {id, value} = e.target
   await dispatch(updatePhase({id, phase: value}))
+  await dispatch(updatePhase({id, phase: value}))
   await getTasks()
   setRenderComponent(!renderComponent)
-  //getTasks()
 }
 
   return (

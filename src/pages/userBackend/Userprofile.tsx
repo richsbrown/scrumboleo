@@ -17,10 +17,10 @@ function Userprofile() {
     const dispatch = useAppDispatch()
 
     const [edit, setEdit] = useState<boolean>(false)
-    const [firstName, setFirstName] = useState(userProfile?.firstName)
-    const [lastName, setLastName] = useState(userProfile?.lastName)
-    const [email, setEmail] = useState(userProfile?.email)
-    const [newPassword, setNewPassword] = useState('')
+    let [firstName, setFirstName] = useState(userProfile?.firstName)
+    let [lastName, setLastName] = useState(userProfile?.lastName)
+    let [email, setEmail] = useState(userProfile?.email)
+    let [newPassword, setNewPassword] = useState('')
     const [confirmNewPassword, setConfirmNewPassword] = useState('')
     const [deleteAllModal, setDeleteAllModal] = useState<boolean>(false)
     const navigate = useNavigate()
@@ -48,6 +48,12 @@ function Userprofile() {
           alert('No Changes Entered')
           return 
         }
+
+        firstName = firstName?.trim()
+        lastName = lastName?.trim()
+        email = email?.trim()
+        newPassword = newPassword.trim()
+
         if(!email?.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/gi)){
           return alert('Invalid Email. Email should follow example@email.com format')
         }
@@ -57,6 +63,7 @@ function Userprofile() {
         if(newPassword !== confirmNewPassword){
           return alert('New Password & Confirm New Password do not match')
         }
+
        await dispatch(updateUserProfile({user, firstName, lastName, email, newPassword}))
        await dispatch(getUserProfile(user!))
        handleEditClick()
