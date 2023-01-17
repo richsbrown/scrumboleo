@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; 
 import { useAppSelector } from './redux/hooks';
 import './App.css';
 import SignIn from './pages/auth/SignIn';
@@ -26,6 +26,7 @@ function App() {
           {user && <Route path='/addtask' element={<AddTask />} />}
           {user && <Route path='/task/:id' element={<TaskDetails />} />}
           {user && <Route path='/userprofile' element={<Userprofile />} />}
+          <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>
     </BrowserRouter>
