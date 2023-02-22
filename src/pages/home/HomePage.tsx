@@ -23,7 +23,7 @@ function HomePage() {
     <div className='container'>
         <div className='sub-container-logo'>
             <img className='scrumboleoMaracas' src={maracas} alt='maracas'/>
-            <span className='scrumboleoText'>Scrumboleo</span>
+            <span className='scrumboleoText' role='contentinfo'>Scrumboleo</span>
         </div>
         <div className='sub-container-buttons'>
             <button className='button' onClick={() => navigate('/signin')}>Sign In</button>
