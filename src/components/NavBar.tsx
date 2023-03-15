@@ -31,5 +31,3 @@ function NavBar({ text }: PropsType) {
 }
 
 export default NavBar
-
-// test
