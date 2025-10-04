@@ -26,14 +26,32 @@ async function handleDeleteTask (taskId: string) {
   setRenderComponent(!renderComponent)
 }
 
-async function handleChangePhase (e: any) {
-  e.preventDefault()
-  const {id, value} = e.target
-  await dispatch(updatePhase({id, phase: value}))
-  await dispatch(updatePhase({id, phase: value}))
-  await getTasks()
-  setRenderComponent(!renderComponent)
-}
+// async function handleChangePhase (e: any) {
+//   e.preventDefault()
+//   const {id, value} = e.target
+//   await dispatch(updatePhase({id, phase: value}))
+//   await dispatch(updatePhase({id, phase: value}))
+//   getTasks()
+//   setRenderComponent(!renderComponent)
+// }
+
+const phaseValue = ''
+
+const handleChangePhase = useCallback (
+  async (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault()
+     const {id, value} = e.target
+     try {
+      await dispatch(updatePhase({id, phase: value}))
+      .then(() => getTasks())
+      .finally(() => setRenderComponent(!renderComponent))
+    } catch (error) {
+      console.error(error)
+     }
+  },
+  [dispatch, phaseValue]
+)
+
 
   return (
     <div className='phase'>
@@ -56,7 +74,7 @@ async function handleChangePhase (e: any) {
                 <select
                   className='phase_select' 
                   name="phase"
-                  value='' 
+                  value={phaseValue} 
                   id={task.id}
                   onChange={handleChangePhase}
                   title='Change Phase'

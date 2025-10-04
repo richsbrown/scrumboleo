@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { getAllTasks } from '../../features/tasks/taskSlice'
 import { CircularProgress } from '@mui/material';
@@ -19,6 +19,8 @@ function Dashboard() {
   const numberOfTasks = useAppSelector((state => state.task.numberOfTasks))
   const dispatch = useAppDispatch();
   
+  const [renderComponent, setRenderComponent] = useState<boolean>(false)
+
   useEffect(() => {
     document.title = 'Dashboard'
   },[])
@@ -26,6 +28,7 @@ function Dashboard() {
   async function getTasks () {
     try{
       await dispatch(getAllTasks(projectId!))
+      setRenderComponent(!renderComponent)
     }catch(err){
       console.log(err)
     }
